@@ -46,7 +46,6 @@ def editar_paciente(request, idPaciente):
     return HttpResponse(pagina.render(mensaje, request))
 
 def eliminar_paciente(request, idPaciente):
-
     paciente = get_object_or_404(Paciente, pk=idPaciente)
     if paciente:
         paciente.delete()

@@ -6,7 +6,7 @@ class Medico(models.Model):
     nombre = models.CharField(max_length=20, null=True)
     apellido = models.CharField(max_length=20, null=True)
     def __str__(self):
-        return f'id:{self.id} - {self.nombre} {self.apellido}'
+        return f' {self.nombre} {self.apellido}'
 
 class Especialidad(models.Model):
     nombre = models.CharField(max_length=20, null=True)
@@ -33,4 +33,4 @@ class Paciente(models.Model):
 
 
     def __str__(self):
-        return f'id:{self.id} - {self.nombre} {self.apellido}'
+        return f'{self.id} - {self.nombre} {self.apellido}'

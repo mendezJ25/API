@@ -10,3 +10,4 @@ class PacienteFormulario(ModelForm):
         widgets = {
             'email': EmailInput(attrs={'type': 'email'})
         }
+
