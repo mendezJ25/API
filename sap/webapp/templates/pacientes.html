@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SISTEMA DE ADMINISTRACION DE PACIENTES </title>
+</head>
+<body>
+<h1>SISTEMA DE ADMINISTRACION DE PACIENTES</h1>
+<p>Cantidad de pacientes: {{cantidad}}</p>
+<div>
+    <a href="agregar_pacientes">Agregar paciente</a>
+</div>
+<table>
+
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Edad</th>
+        <th>Sexo</th>
+        <th>Email</th>
+        <th>Especialidad</th>
+    </tr>
+
+        {% for paciente in pacientes%}
+         <tr>
+             <td>{{paciente.id}}</td>
+             <td>{{paciente.nombre}}</td>
+             <td>{{paciente.apellido}}</td>
+             <td>{{paciente.edad}}</td>
+             <td>{% if paciente.sexo == 'F' %} Femenino {% endif %} {% if paciente.sexo == 'M' %}Masculino {% endif %}</td>
+             <td>{{paciente.email}}</td>
+             <td>{{paciente.especialidad.nombre}}</td>
+             <td><a href="ver_paciente/{{paciente.id}}">Ver Paciente</a></td>
+             <td><a href="editar_paciente/{{paciente.id}}">Editar Paciente</a></td>
+             <td><a href="eliminar_paciente/{{paciente.id}}">Eliminar Paciente</a></td>
+         </tr>
+        {% endfor %}
+
+</table>
+</body>
+</html>

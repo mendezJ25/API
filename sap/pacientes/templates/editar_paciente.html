@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Pacientes</title>
+</head>
+<body>
+<h1>Editar Pacientes</h1>
+<div>
+    <form method="POST">
+        <table>
+            {{formulario}}
+        </table>
+        <input type="submit" value="Grabar">
+        {% csrf_token %}
+    </form>
+
+
+</div>
+<div>
+    <a href="{%url 'inicio'%}">REGRESAR</a>
+</div>
+</body>
+</html>

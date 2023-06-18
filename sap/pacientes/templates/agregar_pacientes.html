@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Pacientes</title>
+</head>
+
+<body>
+<h1>Agregar Pacientes</h1>
+<div>
+    <form method="POST">
+        <table>
+            {{formulario}}
+        </table>
+        <input type="submit" value="Guardar">
+        {% csrf_token %}
+    </form>
+</div>
+<div>
+  <a href="{%url 'inicio'%}">REGRESAR</a>
+</div>
+</body>
+</html>
