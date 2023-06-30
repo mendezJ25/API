@@ -8,7 +8,9 @@ from pacientes.models import Paciente
 def mostrar_pacientes(request):
      cantidad_pacientes = Paciente.objects.count()
      pagina = loader.get_template('pacientes.html')
-     nombres_pacientes = Paciente.objects.all()
+     # nombres_pacientes = Paciente.objects.all()
+     nombres_pacientes = Paciente.objects.order_by('apellido')
+
      datos = {'cantidad': cantidad_pacientes, 'pacientes':nombres_pacientes}
 
 
