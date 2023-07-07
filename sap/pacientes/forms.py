@@ -6,7 +6,7 @@ from pacientes.models import Paciente
 class PacienteFormulario(ModelForm):
     class Meta:
         model = Paciente
-        fields = ('nombre', 'apellido', 'edad', 'sexo', 'email', 'especialidad')
+        fields = ('nombre', 'apellido', 'edad', 'sexo', 'email', 'especialidad', 'expediente')
         widgets = {
             'email': EmailInput(attrs={'type': 'email'})
         }
