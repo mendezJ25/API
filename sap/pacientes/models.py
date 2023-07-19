@@ -1,5 +1,6 @@
 from django.core.exceptions import ValidationError
 from django.db import models
+from rest_framework import viewsets, permissions
 
 
 class Medico(models.Model):
@@ -52,4 +53,6 @@ class Paciente(models.Model):
 
     def __str__(self):
         return f'{self.id} - {self.nombre} {self.apellido}'
+
+
 

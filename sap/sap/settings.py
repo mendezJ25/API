@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'webapp',
     'pacientes',
     'fontawesomefree',
+    'rest_framework',
+
 
 
 ]
@@ -92,6 +94,7 @@ DATABASES = {
         'PASSWORD': 'uTQ5UkVGg6a_mPoCO09V_9dW3JM9RDDr',
         'HOST': 'silly.db.elephantsql.com',
         'PORT': '5432',
+
     }
 }
 
@@ -136,3 +139,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
