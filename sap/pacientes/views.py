@@ -98,7 +98,7 @@ class PacienteViewSet(viewsets.ModelViewSet):
     """
     queryset = Paciente.objects.all()
     serializer_class = PacienteSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
 class PacienteDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Paciente.objects.all()
